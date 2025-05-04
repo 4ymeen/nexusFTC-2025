@@ -73,7 +73,7 @@ Execution:
 - The output sequence (`[1,0,0,0, 67,0,0,0, 7,0,0,0, ...]`, outputting "Correct!") starts at byte 2400 (DWORD 600).
 - From byte 0 to 2340: `2340 / 60 = 39 blocks`.
 
-Thus, the flag has 39 characters.
+Thus, the flag has 55 characters.
 
 ---
 
@@ -134,7 +134,7 @@ with open("code.bin", "rb") as f:
 
 # Extract y values (39 blocks, y at offset 44 in each 60-byte block)
 y_values = []
-for i in range(39):
+for i in range(55):
     block_start = i * 60
     y_offset = block_start + 44
     # Read 4 bytes as little-endian integer
@@ -179,4 +179,4 @@ This matches the VM's expected output of "Correct!" for a valid flag.
 
 ## Conclusion
 
-The challenge required reverse-engineering a VM, analyzing its instruction set, and extracting parameters from `code.bin`. By computing the modular inverse and applying the derived formula, we successfully recovered the 39-character flag. The Python script automates this process, making it reusable for similar challenges.
+The challenge required reverse-engineering a VM, analyzing its instruction set, and extracting parameters from `code.bin`. By computing the modular inverse and applying the derived formula, we successfully recovered the 55-character flag. The Python script automates this process, making it reusable for similar challenges.
