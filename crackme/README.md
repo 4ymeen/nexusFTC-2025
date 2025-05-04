@@ -1,4 +1,4 @@
-# Writeup: Solving crackmeV2
+# Writeup: Solving crackme
 
 This writeup details the process of solving a reverse engineering challenge involving an ELF64 x86-64 binary named `chall`. The goal is to determine the correct input string that, when provided to the program via `./chall`, results in the output:
 
