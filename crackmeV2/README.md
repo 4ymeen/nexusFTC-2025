@@ -1,4 +1,4 @@
-# CTF Writeup: Virtual Machine Flag Extraction
+# CTF Writeup: crackmeV2
 
 This writeup details the process of solving a Capture The Flag (CTF) challenge that involves reverse-engineering a virtual machine (VM) implemented in C. The VM reads instructions from a binary file (`code.bin`), processes an input flag, and outputs "Correct!" if the flag is valid. The goal is to determine the correct flag by analyzing the VM's behavior and extracting the necessary computations from `code.bin`.
 
